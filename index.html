@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Github">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="Home" class="home-section">
+        <video autoplay muted loop class="background-video">
+            <source src="videos/coding.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="home-content">
+            <h1>My Portfolio</h1>
+
+            <p class="quote">
+                "The computer programmer is a creator of universes for which he alone is the lawgiver."
+                <br>
+                - Joseph Weizenbaum
+            </p>
+
+            <p>
+                My name is Yahya. Welcome to my portfolio website.
+                Here, I will tell you about my background, skills, and projects.
+            </p>
+
+            <p>Thank you for visiting!</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="About" class="section">
+        <div class="row">
+            <div class="column">
+                <img src="images/laptop.jpg" alt="Laptop" class="section-img">
+            </div>
+
+            <div class="column">
+                <h2>About</h2>
+                <p>
+                    I am learning web development and building my skills in HTML, CSS,
+                    Bootstrap, JavaScript, and other technologies.
+                </p>
+
+                <p>
+                    I enjoy creating clean, responsive websites and improving my coding
+                    skills through hands-on projects.
+                </p>
+
+                <p>
+                    I am currently working toward a career in technology and continuing
+                    to build projects for my portfolio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GITHUB SECTION -->
+    <section id="Github" class="section dark-section">
+        <div class="row">
+            <div class="column">
+                <h2>GitHub</h2>
+                <p>
+                    You can view my coding projects on my GitHub profile.
+                </p>
+
+                <a href="https://github.com/yibrahi/HTML-and-CSS-Projects" target="_blank" class="button">
+                    Visit My GitHub
+                </a>
+            </div>
+
+            <div class="column">
+                <img src="images/githublogo.jpeg" alt="GitHub logo" class="section-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="Contact" class="section">
+        <div class="row">
+            
+            <!-- CONTACT IMAGE -->
+            <div class="column">
+                <img src="images/contact.jpg" alt="Contact image" class="section-img">
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="column">
+                <h2>Contact</h2>
+
+                <form class="contact-form" action="https://formspree.io/f/mrgolqyv" method="POST">
+                    <label>Name:</label>
+                    <input type="text" name="Name" placeholder="Please enter your name here">
+
+                    <label>Email:</label>
+                    <input type="email" name="Email" placeholder="Please enter your email here">
+
+                    <label>Message:</label>
+                    <textarea name="Message" rows="6" placeholder="Please write your message here"></textarea>
+
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
