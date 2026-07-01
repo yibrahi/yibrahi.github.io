@@ -14,9 +14,10 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <a href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
-        <a href="#Github">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </nav>
 
     <!-- HOME SECTION -->
@@ -41,6 +42,60 @@
             </p>
 
             <p>Thank you for visiting!</p>
+        </div>
+    </section>
+
+    <!-- SLIDESHOW SECTION -->
+    <section id="Slideshow" class="section dark-section">
+        <h2>My Skills & Goals</h2>
+
+        <div id="Slideshow_Container">
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/laptop.jpg" alt="Laptop and web development">
+                <div class="text">Welcome to my technology portfolio.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/githublogo.jpeg" alt="GitHub logo">
+                <div class="text">I use GitHub to organize and share my coding projects.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/html_pic.jpg" alt="Contact image">
+                <div class="text">I am learning HTML, CSS, JavaScript, Bootstrap, Git, and GitHub.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/technology.jpg" alt="Technology learning">
+                <div class="text">I am working toward a career in IT, networking, cloud, and cybersecurity.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/githublogo.jpeg" alt="GitHub projects">
+                <div class="text">You can view my projects on GitHub and connect with me on LinkedIn.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="images/contact.jpg" alt="Contact me">
+                <div class="text">
+                    <a onclick="openForm()" class="white-text contact">Contact me now!</a>
+                </div>
+            </div>
+
+            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
         </div>
     </section>
 
@@ -91,40 +146,38 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="Contact" class="section">
-        <div class="row">
-            
-            <!-- CONTACT IMAGE -->
-            <div class="column">
-                <img src="images/contact.jpg" alt="Contact image" class="section-img">
-            </div>
+   <!-- POPUP CONTACT FORM -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
 
-            <!-- CONTACT FORM -->
-            <div class="column">
-                <h2>Contact</h2>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/mrgolqyv" method="POST" class="form-container">
+                <h1>Contact</h1>
 
-                <form class="contact-form" action="https://formspree.io/f/mrgolqyv" method="POST">
-                    <label>Name:</label>
-                    <input type="text" name="Name" placeholder="Please enter your name here">
+                <label for="name"><b>Name</b></label>
+                <input type="text" id="name" placeholder="Type your name here" name="name" required>
 
-                    <label>Email:</label>
-                    <input type="email" name="Email" placeholder="Please enter your email here">
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" placeholder="Type your email address here" name="email" required>
 
-                    <label>Message:</label>
-                    <textarea name="Message" rows="6" placeholder="Please write your message here"></textarea>
+                <label for="message"><b>Message</b></label>
+                <input type="text" id="message" placeholder="Type your message here" name="message" required>
 
-                    <button type="submit">SUBMIT</button>
-                </form>
-            </div>
-
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
         </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+        <p>
+            &copy; 2026 Yahya's Portfolio |
+            <a href="https://github.com/yibrahi" target="_blank">GitHub</a>
+        </p>
     </footer>
+
+    <script src="JS/portfolio.js"></script>
 
 </body>
 </html>
